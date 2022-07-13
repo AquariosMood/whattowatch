@@ -1,0 +1,67 @@
+:root {
+  --light: #dafafc;
+  --main: #449ec9;
+  --second: #dfd5a5;
+  --second-light: #f5f1e0;
+  --dark: #437d9c;
+  --black: #0d2f60;
+  --success: #32b544;
+  --warning: #ffc73a;
+  --danger: #ff6254;
+  background-color: var(--main);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Yanone Kaffeesatz", sans-serif;
+}
+body {
+  padding-top: 2vh;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.myprofile {
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  justify-content: center;
+  gap: 10%;
+  background-color: var(--dark);
+  border-radius: 20px;
+  width: 80vh;
+}
+.nav-item {
+  list-style-type: none;
+}
+.nav-link {
+  text-decoration: none;
+  font-size: 32px;
+  color: var(--second-light);
+}
+.nav-link:hover {
+  color: var(--second);
+}
+#hh {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.profilepic {
+  position: relative;
+  justify-content: center;
+}
+.picturejpg {
+  width: 150px;
+  border-radius: 100%;
+}
+input[type="file"] {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  padding: 10px;
+}

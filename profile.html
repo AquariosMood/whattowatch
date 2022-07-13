@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <script type="module" src="main.js"></script> -->
+    <script type="module" src="profile.js"></script>
+
+    <script
+      src="https://kit.fontawesome.com/438829d596.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="profile.css" />
+    <link href="login.html" />
+    <link href="register.html" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&family=Yanone+Kaffeesatz:wght@300;500&display=swap"
+      rel="stylesheet"
+    />
+    <title>My Profile</title>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"
+      integrity="sha512-E8QSvWZ0eCLGk4km3hxSsNmGWbLtSCSUcewDQPQWZF6pEU8GlT8a5fF32wOl1i8ftdMhssTrF/OhyGWwonTcXA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+</html>
+<body>
+  <div class="myprofile">
+    <li class="nav-item mx-1">
+      <a id="signoutlink" class="nav-link active" href="javascript:Signout()"
+        >Sign Out</a
+      >
+    </li>
+    <div class="backtoindex">
+      <div class="nav-item mx-1">
+        <a href="index.html" class="nav-link active">Go back</a>
+      </div>
+    </div>
+  </div>
+  <h3 id="hh"></h3>
+
+  <script>
+    function getUsername() {
+      let keepLoggedIn = localStorage.getItem("keepLoggedIn");
+
+      if (keepLoggedIn == "yes") {
+        currentUser = JSON.parse(localStorage.getItem("user"));
+      } else {
+        currentUser = JSON.parse(sessionStorage.getItem("user"));
+      }
+    }
+    function Signout() {
+      sessionStorage.removeItem("user");
+      localStorage.removeItem("user");
+      localStorage.removeItem("keepLoggedIn");
+      window.location = "index.html";
+    }
+  </script>
+</body>
